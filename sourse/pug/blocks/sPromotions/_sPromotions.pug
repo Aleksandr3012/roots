@@ -1,0 +1,15 @@
+mixin sPromotions(data)
+	// start sPromotions
+	+b.sPromotions#sPromotions&attributes(attributes)
+		.container
+			+e.inner
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide(title, text)
+							.swiper-slide
+								+e.slide
+									h3= title 
+									p!= text
+						+slide('Приведи друга',`Мы&nbsp;всегда рады новым лицам, поэтому первую стрижку вы&nbsp;получаете с&nbsp;10% скидкой!`)
+						+slide('Кешбэк 20%',`С&nbsp;каждой стрижки&nbsp;Вы получаете кешбэк, который можно потратить на&nbsp;косметику.`)
+	// end sPromotions

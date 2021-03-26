@@ -1,0 +1,43 @@
+mixin sHaircuts(data)
+	// start sHaircuts
+	+b.SECTION.sHaircuts.section#sHaircuts&attributes(attributes)
+		.container
+			+b.section-title
+				h2 К НАМ ВОЗВРАЩАЮТСЯ 90% КЛИЕНТОВ?
+
+			+e.row.row
+				+e.col.col-lg-3
+					h3 СТРИЖКИ
+					p Все мы&nbsp;знаем, какое пристальное внимание уделяется в&nbsp;нашем обществе внешности. 
+					p Стрижка является неотъемлемым атрибутом мужского образа. 
+					p Наши мастера&nbsp;&mdash; высококлассные профессионалы, способные воплотить любые пожелания в&nbsp;реальность.
+					+b.btnMore(href="#")
+						+e.text Больше фотографий
+						+e.arrow 
+							+icon('arrow-right')
+
+				.col-lg-9
+					+e.slider--js.swiper-container
+						.swiper-wrapper
+							.swiper-slide
+								+card('1','Владислав')
+							.swiper-slide
+								+card('2','Дарья')
+							.swiper-slide
+								+card('3','Роман')
+
+	// end sHaircuts
+
+mixin card(i,name)
+	+b.card
+		+e.photo
+			+pic(`photo-${i}.jpg`,'','')
+		+e.row.row.align-items-center
+			.col-4 
+				+e.master
+					+pic(`master-${i}.jpg`,'','')
+			.col
+				h5 Мастер
+				+e.name= name
+		a.btn.btn-secondary(href="#") Записаться к мастеру
+

@@ -1,0 +1,21 @@
+mixin mob-mnu()
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js.on
+			span
+		+e.inner
+
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy.d-none.d-lg-block
+		.container
+			.row.align-items-center
+				.col 
+					+mnu
+				.col-auto
+					+soc
+
+
+	// end top-nav

@@ -1,0 +1,40 @@
+// start .sPromotions
+.sPromotions {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+
+	&__inner {
+		margin-top: rem(-136px);
+		width: rem(745);
+		max-width: calc(100% - #{rem(300)});
+		margin-left: auto;
+	}
+
+	&__slide {
+		background: #000000;
+		box-shadow: 0px 0px 46px rgba(254, 0, 137, 0.15);
+		padding: rem(24) rem(32) rem(11);
+		color: #fff;
+		height: 100%;
+	}
+
+	.swiper-slide {
+		height: auto;
+	}
+
+	h3 {
+		font-weight: 800;
+		text-transform: uppercase;
+		margin-bottom: rem(17);
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPromotions

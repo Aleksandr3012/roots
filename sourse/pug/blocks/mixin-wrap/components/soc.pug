@@ -1,0 +1,20 @@
+mixin item-sos(icon,t, a='#')
+	+e.A.item(href= a target="_blank")
+		if block
+			block
+		else
+			+e.iconWrap
+				+icon(icon)
+			span= t
+//- social buttons
+mixin soc()
+	+b.soc&attributes(attributes)
+		if block
+			block
+		else
+			+item-sos('instagram','Instagram')
+			+item-sos('vk','Вконтакте')
+			+item-sos('fb','Facebook')
+			+item-sos('telegram','Telegram')
+
+//- /social buttons 

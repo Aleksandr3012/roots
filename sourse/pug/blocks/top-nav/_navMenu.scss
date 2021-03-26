@@ -1,0 +1,54 @@
+.navMenu {
+	display: flex;
+	list-style: none;
+	@include roww(5px);
+	@include media-breakpoint-up(xl) {
+		@include roww(15px);
+	}
+	position: relative;
+	margin-bottom: 0;
+	max-width: 100%;
+	flex-wrap: wrap;
+	&__link {
+		display: block;
+		text-align: center;
+		padding: rem(11) rem(5);
+		color: #fff !important;
+		text-decoration: none;
+		border-bottom: solid 1px transparent;
+
+		@include h {
+			border-color: #fff;
+		}
+	}
+}
+
+.soc {
+	@include roww(8px, m);
+	display: flex;
+	align-items: center;
+	&__item {
+		text-decoration: none !important;
+		@include mt;
+		display: flex;
+		align-items: center;
+		color: #fff !important;
+		padding: rem(11) rem(5);
+	}
+	.icon {
+		font-size: rem(12);
+		margin-right: rem(5);
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(10);
+		}
+	}
+}
+
+.top-nav .soc {
+	&__item {
+		border-bottom: solid 1px transparent;
+		@include h {
+			border-color: #fff;
+		}
+	}
+}

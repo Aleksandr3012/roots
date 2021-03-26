@@ -1,0 +1,48 @@
+mixin topLine()
+	// start topLine
+	+b.topLine.section#topLine&attributes(attributes)
+		.container
+			+e.mainRow.row.align-items-center
+				.col-auto 
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg" alt="logo")
+				.col-auto 
+					+location
+				+e.col.col
+					+e.tel(href='tel:+74722373637') 
+						span.d-none.d-lg-inline +7 (4722) 37-36-37
+						span.d-lg-none
+							+icon('call')
+				.col-auto 
+					+e.row.row.align-items-center
+						.col-4.d-none.d-lg-block 
+							+download('app-store')
+						.col-4.d-none.d-lg-block 
+							+download('google-play')
+						.col-lg-4 
+							+btn('Записаться')
+				.col.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+
+	// end topLine
+
+mixin btn(t)
+	a.btn.btn-light(href="#") 
+		span= t
+
+mixin download(img)
+	+b.download(href='#')&attributes(attributes)
+		img.res-i(src=`img/svg/${img}.svg` alt="" loading='lazy')
+
+
+mixin location 
+	+b.location 
+		+e.head.drop-accardion-js 
+			span Белгород
+			+icon('chevron-down')
+		+e.drop.drop-accardion-toggle-js 
+			+e.item(href="#") 
+				span Москва
+			+e.item(href="#") 
+				span Тбилиси

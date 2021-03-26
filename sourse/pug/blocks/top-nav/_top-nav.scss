@@ -1,0 +1,26 @@
+.top-nav {
+	position: sticky;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 800;
+
+	background: rgba(19, 19, 19, 0.69);
+	&.fixed {
+		// position: fixed;
+		bottom: auto;
+		margin-top: 0;
+	}
+
+	@include media-breakpoint-up(xl) {
+		.container {
+			max-width: 1140px;
+		}
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+}

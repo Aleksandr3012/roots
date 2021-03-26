@@ -1,0 +1,129 @@
+// start .sHaircuts
+.sHaircuts {
+	--sPT: #{rem(70)};
+	// --sPB: ;
+
+	.section-title {
+		max-width: rem(680);
+	}
+
+	h2 {
+		margin-bottom: rem(4);
+	}
+
+	h2,
+	h3 {
+		text-transform: uppercase;
+	}
+
+	h3 {
+		font-weight: 800;
+		margin-bottom: rem(15);
+	}
+
+	p {
+		margin-bottom: rem(22);
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.btnMore {
+		margin-top: auto;
+		display: flex;
+	}
+
+	.btn-secondary {
+		display: block;
+	}
+
+	&__row {
+		@include roww(30px);
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sHaircuts
+
+.card {
+	&__photo {
+		margin-bottom: rem(16);
+		@include block(261, 317);
+		img {
+			width: 100%;
+			height: 100%;
+			@include a-cent;
+			object-fit: cover;
+		}
+	}
+
+	&__master {
+		border-radius: 50%;
+		overflow: hidden;
+		max-width: rem(71);
+		@include block(71, 71);
+		img {
+			width: 100%;
+			height: 100%;
+			@include a-cent;
+			object-fit: cover;
+		}
+	}
+
+	&__row {
+		margin-bottom: rem(8);
+		@include roww(16px);
+		padding-left: rem(9);
+	}
+
+	&__btn {
+		display: block;
+	}
+
+	h5 {
+		text-transform: uppercase;
+		margin-bottom: rem(5);
+		font-weight: 800;
+	}
+}
+
+.btnMore {
+	background-color: #000;
+	text-transform: uppercase;
+	font-weight: 800;
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	text-align: center;
+
+	&__text {
+		padding: rem(10);
+		color: #fff;
+		width: 100%;
+	}
+
+	&__arrow {
+		margin-left: auto;
+		background: #1b1b1b;
+		padding: rem(11.5) rem(12) rem(11.5) rem(4);
+	}
+
+	.icon {
+		font-size: rem(9);
+		color: #fff;
+		@include mt;
+	}
+
+	@include h {
+		.icon {
+			color: rgba(255, 255, 255, 0.2);
+		}
+	}
+}
