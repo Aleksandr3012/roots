@@ -1,5 +1,8 @@
 // start .header
 .header {
+	&-inner {
+		background: rgba(19, 19, 19, 0.69);
+	}
 	//
 	@include media-breakpoint-between(md, xl) {
 	}

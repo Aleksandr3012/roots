@@ -6,6 +6,12 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sPromotions/_sPromotions.pug
 include ../blocks/sHaircuts/_sHaircuts.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sDiscounts/_sDiscounts.pug
+include ../blocks/sCertificates/_sCertificates.pug
+include ../blocks/sMasters/_sMasters.pug
+include ../blocks/sDownload/_sDownload.pug
+include ../blocks/sSubscribe/_sSubscribe.pug
 
 block variables
 	- let  mainPage= null 
@@ -16,7 +22,8 @@ block title
 	title= title
 block pagecontent
 	script.
-		let screenName = 'main.jpg'
+		//- let screenName = 'main.jpg'
+		let screenName = 'mob.jpg'
 
 
 	+mob-mnu()
@@ -24,9 +31,14 @@ block pagecontent
 		+header()
 			+topLine()
 			+top-nav()
-	+sPromotions
-	+sHaircuts
-	+sAdvantages
-	+sForm()
+	+sPromotions()
+	+sHaircuts()
+	+sAdvantages()
+	+sPrice()
+	+sDiscounts().d-none.d-sm-block
+	+sCertificates()
+	+sMasters
+	+sDownload
 	+sContact()
+	+sSubscribe
 	+footer()

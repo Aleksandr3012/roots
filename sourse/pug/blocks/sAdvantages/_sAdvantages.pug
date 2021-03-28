@@ -2,8 +2,25 @@ mixin sAdvantages(data)
 	// start sAdvantages
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sAdvantages
-				
 			.row
+				.col-lg-6 
+					+e.mainImg 
+						+pic('advantages-1.jpg','','')
+					+e.textBlock 
+						h3 СЕРВИС
+						.row 
+							.col-md-6 
+								p Среди множеств заведений, отличный сервис- становится причиной, из-за которой хочется возвращаться вновь. 
+								p Мы&nbsp;знаем о&nbsp;наших клиентах все, начиная от&nbsp;любимого вида кофе и&nbsp;заканчивая днем рождения.
+							.col-md-6 
+								p Приветливые<br> девочки-администраторы всегда подарят Вам теплую улыбку, а&nbsp;мастера будут становиться близкими друзьями с&nbsp;каждым визитом.
+				.col-lg-6 
+					+e.mainImg 
+						+pic('advantages-2.jpg','','')
+					+e.textBlock 
+						+e.smImg.d-none.d-md-inline 
+							+pic('advantages-3.jpg','','')
+						h3 Дизайн
+						p Кирпич, дерево, массивные текстуры в&nbsp;дизайне и&nbsp;&laquo;мастера&#8209;бородачи&raquo; с&nbsp;брутальной стрижкой, все это мы&nbsp;давно оставили в&nbsp;прошлом.
+						p ROOTS - место переворачивающее ваше представление о мужской парикмахерской. Яркий неохайтек, тропические растения, просторный рабочий зал и динамичная музыка - это новый взгляд на привычные вещи и наша отличительная черта.
 	// end sAdvantages

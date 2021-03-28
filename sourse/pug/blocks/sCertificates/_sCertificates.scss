@@ -1,0 +1,118 @@
+// start .sCertificates
+.sCertificates {
+	--sPT: #{rem(28)};
+	--sPB: #{rem(28)};
+	--sTPB: #{rem(20)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(49)};
+		--sPB: #{rem(45)};
+		--sTPB: #{rem(29)};
+	}
+	background: #0b0b0b;
+	color: #fff;
+	overflow: hidden;
+
+	h2 {
+		text-transform: uppercase;
+	}
+
+	&__slide {
+		display: block;
+		border: 1px solid #ffffff;
+		border-radius: 4px;
+		padding: rem(14) rem(20);
+		text-decoration: none;
+		@include media-breakpoint-up(md) {
+			padding: rem(23) rem(30);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(16);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(23) rem(64);
+		}
+
+		@include h {
+			border-color: $secondary;
+		}
+
+		.row {
+			@include roww(20px);
+		}
+	}
+
+	&__slideWrap {
+		@include media-breakpoint-down(lg) {
+			width: 89% !important;
+		}
+	}
+
+	&__row {
+		@include roww(37px);
+	}
+
+	&__imgWrap {
+		margin-top: calc(-1 * var(--sPT));
+		margin-bottom: calc(-1 * var(--sPB));
+		height: 100%;
+		// @include block(664, 664);
+		// text-align: center;
+		background: linear-gradient(
+			90.2deg,
+			#0b0b0b 0.15%,
+			rgba(11, 11, 11, 0) 51.58%,
+			#0b0b0b 99.81%
+		);
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			max-height: rem(527);
+			// @include a-cent;
+		}
+
+		// &::before {
+		// 	z-index: 2;
+		// 	background: linear-gradient(
+		// 		90.2deg,
+		// 		#0b0b0b 0.15%,
+		// 		rgba(11, 11, 11, 0) 51.58%,
+		// 		#0b0b0b 99.81%
+		// 	);
+		// }
+	}
+
+	&__text {
+		color: #fff;
+		line-height: calc(17 / 14);
+		display: block;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: $h5-font-size;
+		font-weight: 800;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(5);
+			display: inline-block;
+		}
+	}
+
+	&__btnWrap {
+		padding-top: rem(19);
+	}
+
+	&__slider {
+		overflow: visible !important;
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCertificates

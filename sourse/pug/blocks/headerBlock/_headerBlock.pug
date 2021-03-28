@@ -12,6 +12,8 @@ mixin headerBlock()
 			p Это уникальное явление в&nbsp;сфере барберинга. Записывайся на&nbsp;стрижку и&nbsp;убедись сам.
 			+e.btnWrap 
 				+signUp
+
+			+soc-sm().d-lg-none
 			+e.addres 
 				h5 Наш адрес
 				p Белгород, Гражданский проспект, 25
@@ -19,8 +21,13 @@ mixin headerBlock()
 
 	// end headerBlock
 
-mixin signUp
+mixin signUp(gift)
 	+b.signUp(href='#')&attributes(attributes)
-		+e.text Записаться
-		+e.calendar 
-			+icon('calendar')
+		if gift 
+			+e.text Сделать подарок
+			+e.calendar 
+				+icon('gift')
+		else
+			+e.text Записаться
+			+e.calendar 
+				+icon('calendar')

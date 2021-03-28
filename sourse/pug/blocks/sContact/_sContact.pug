@@ -2,8 +2,33 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
+			+b.section-title
+				h2 КОНТАКТы
+
 			.row
+				.col-lg-7 
+					+e.mapWrap 
+				.col-lg 
+					+e.grafic 
+						.row 
+							.col.col-md-auto Ежедневно
+							.col с 10:00 до 21:00
+					+e.block 
+						h5 Телефон
+						+e.wrap
+							+e.tel(href="tel:+74722373637") +7 (4722) 37-36-37
+							+e.contacts
+								+e.link(href="#")
+									img(src="img/svg/whatsup-bg.svg" alt="whatsup" loading='lazy')
+									| WHATSAPP
+								+e.link(href="#")
+									img(src="img/svg/telegram-bg.svg" alt="whatsup" loading='lazy')
+									| WHATSAPP
+								+e.link(href="#") sms
+						+e.wrap
+							h5 Почта
+							+e.mail(href='mailto:rootsmenscut@gmail.com') rootsmenscut@gmail.com
+						+e.wrap
+							h5 Адрес
+							+e.addres Белгород, Гражданский проспект,&nbsp;25 
 	// end sContact

@@ -2,7 +2,7 @@ $h: em(2);
 
 .toggle-menu-mobile {
 	display: block;
-	height: $h * 12;
+	height: 1em;
 	position: relative;
 	color: #fff;
 	font-size: 32px;
@@ -15,19 +15,19 @@ $h: em(2);
 	span:before {
 		content: "";
 		position: absolute;
-		left: 0;
 	}
 
 	span {
 		@include a-cent(y);
+		margin-left: 5px;
 	}
 
 	span:before {
-		top: $h * 2;
+		top: $h * 1.6;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: $h * 1.6;
 	}
 
 	span {
@@ -38,12 +38,12 @@ $h: em(2);
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
-		height: $h;
+		width: rem(20);
+		height: rem(2);
 		background-color: currentColor;
 		transition: all 0.3s;
 		backface-visibility: hidden;
-		border-radius: 6px;
+		// border-radius: 6px;
 		transform-origin: 50% 50%;
 	}
 
@@ -75,7 +75,7 @@ $h: em(2);
 	z-index: 999;
 	max-width: 85%;
 	height: calc(var(--vh, 1vh) * 100);
-	width: 280px;
+	width: 320px;
 	top: 0;
 	// left: 0;
 	right: 0;
@@ -87,12 +87,19 @@ $h: em(2);
 	will-change: transform;
 
 	&__inner {
-		background-color: #c3c3c3;
-		padding: rem(20) 0;
+		background-color: #000;
+		color: #fff;
+		padding: rem(20) rem(15);
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
+	}
+
+	&__logo {
+		display: block;
+		margin-bottom: rem(25);
+		max-width: rem(60);
 	}
 
 	&.active {
@@ -101,10 +108,27 @@ $h: em(2);
 		}
 	}
 
+	.signUp {
+		margin-bottom: rem(20);
+	}
+
+	&__row {
+		@include roww(8px);
+	}
+
+	&__tel {
+		color: #fff;
+		display: block;
+		text-decoration: none;
+		font-weight: 800;
+		font-size: $h5-font-size;
+		margin-bottom: rem(28);
+	}
+
 	.toggle-menu-mobile {
 		// position: relative;
 		cursor: pointer;
-		margin-left: -15%;
+		margin-left: 85%;
 		position: absolute;
 		opacity: 0;
 		left: 0;
@@ -129,6 +153,16 @@ $h: em(2);
 		}
 	}
 
+	.navMenu {
+		flex-direction: column;
+		padding-bottom: rem(15);
+
+		&__link {
+			text-align: left;
+			padding: rem(7) 0;
+		}
+	}
+
 	ul {
 		position: relative;
 	}
@@ -136,12 +170,12 @@ $h: em(2);
 	li {
 		display: block;
 		margin: 0;
-		border-top: 1px solid rgba(255, 255, 255, 0.13);
+		// border-top: 1px solid rgba(255, 255, 255, 0.13);
 
 		a {
 			// font-size: 16px;
 
-			padding: 10px;
+			// padding: 10px;
 			display: block;
 		}
 	}

@@ -116,9 +116,9 @@ const JSCCommon = {
 				content.dataset.tabContent = data;
 				if (!content.dataset.tabContent == data) return;
 
-				const active = content.classList.contains('active') ? 'active' : '';
-				console.log(el.innerHTML);
-				content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary d-block mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
+				// const active = content.classList.contains('active') ? 'active' : '';
+				// console.log(el.innerHTML);
+				// content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary d-block mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
 			})
 
 
@@ -135,7 +135,7 @@ const JSCCommon = {
 				});
 				content.forEach(element => {
 					element.dataset.tabContent == data
-						? (element.classList.add('active'), element.previousSibling.classList.add('active'))
+						? (element.classList.add('active'))
 						: element.classList.remove('active')
 				});
 			})
@@ -329,6 +329,34 @@ function eventHandler() {
 		}
 	});
 
+	const sertificatesSlider = new Swiper('.sCertificates__slider--js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 16,
+		// autoHeight: true,
+		breakpoints: {
+			992: {
+				slidesPerView: 3,
+				direction: 'vertical',
+				spaceBetween: 0
+			}
+		}
+	});
+
+	const mastersSlider = new Swiper('.sMasters__slider--js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 16,
+		breakpoints: {
+			992: {
+				slidesPerView: 4,
+				slidesPerColumn: 2,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+
 	const haircutsSlider = new Swiper('.sHaircuts__slider--js', {
 		slidesPerView: 'auto',
 		// loop: true,
@@ -338,9 +366,20 @@ function eventHandler() {
 			// spaceBetween: 30,
 			watchOverflow: true,
 		breakpoints: {
-			768: {
+			992: {
 				slidesPerView: 3,
 				spaceBetween: 30
+			}
+		}
+	});
+
+	const tabSlider = new Swiper('.sPrice__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		watchOverflow: true,
+		breakpoints: {
+			768: {
+				spaceBetween: 16
 			}
 		}
 	});

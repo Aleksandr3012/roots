@@ -132,10 +132,9 @@ var JSCCommon = {
 				el.dataset.tabBtn = data;
 				var content = tabsContent[index];
 				content.dataset.tabContent = data;
-				if (!content.dataset.tabContent == data) return;
-				var active = content.classList.contains('active') ? 'active' : '';
-				console.log(el.innerHTML);
-				content.insertAdjacentHTML("beforebegin", "<div class=\"tabs__btn-accordion  btn btn-primary d-block mb-1 ".concat(active, "\" data-tab-btn=\"").concat(data, "\">").concat(el.innerHTML, "</div>"));
+				if (!content.dataset.tabContent == data) return; // const active = content.classList.contains('active') ? 'active' : '';
+				// console.log(el.innerHTML);
+				// content.insertAdjacentHTML("beforebegin", `<div class="tabs__btn-accordion  btn btn-primary d-block mb-1 ${active}" data-tab-btn="${data}">${el.innerHTML}</div>`)
 			});
 			tabs.addEventListener('click', function (element) {
 				var btn = element.target.closest("[data-tab-btn]:not(.active)");
@@ -147,7 +146,7 @@ var JSCCommon = {
 					element.dataset.tabBtn == data ? element.classList.add('active') : element.classList.remove('active');
 				});
 				content.forEach(function (element) {
-					element.dataset.tabContent == data ? (element.classList.add('active'), element.previousSibling.classList.add('active')) : element.classList.remove('active');
+					element.dataset.tabContent == data ? element.classList.add('active') : element.classList.remove('active');
 				});
 			});
 		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
@@ -324,6 +323,31 @@ function eventHandler() {
 			}
 		}
 	});
+	var sertificatesSlider = new Swiper('.sCertificates__slider--js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 16,
+		// autoHeight: true,
+		breakpoints: {
+			992: {
+				slidesPerView: 3,
+				direction: 'vertical',
+				spaceBetween: 0
+			}
+		}
+	});
+	var mastersSlider = new Swiper('.sMasters__slider--js', {
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 16,
+		breakpoints: {
+			992: {
+				slidesPerView: 4,
+				slidesPerColumn: 2,
+				spaceBetween: 30
+			}
+		}
+	});
 	var haircutsSlider = new Swiper('.sHaircuts__slider--js', {
 		slidesPerView: 'auto',
 		// loop: true,
@@ -333,9 +357,19 @@ function eventHandler() {
 		// spaceBetween: 30,
 		watchOverflow: true,
 		breakpoints: {
-			768: {
+			992: {
 				slidesPerView: 3,
 				spaceBetween: 30
+			}
+		}
+	});
+	var tabSlider = new Swiper('.sPrice__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		watchOverflow: true,
+		breakpoints: {
+			768: {
+				spaceBetween: 16
 			}
 		}
 	});

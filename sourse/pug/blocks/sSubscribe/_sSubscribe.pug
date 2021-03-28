@@ -1,0 +1,27 @@
+mixin sSubscribe(data)
+	// start sSubscribe
+	+b.SECTION.sSubscribe.section#sSubscribe&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Подписывайтесь на нас
+			+e.text
+				p В&nbsp;наших соцсетях вы&nbsp;найдете только качественный контент: рассказываем о&nbsp;стрижках, транслируем обучающие ролики и&nbsp;показываем вам внутреннюю кухню. Подписывайтесь, чтобы не&nbsp;пропустить самое свежее!
+
+			.row
+				.col-sm-6.col-lg-3 
+					+e.item(href="#")
+						img(src="img/svg/inst-bg.svg" alt="INSTAGRAM" loading="lazy")
+						span INSTAGRAM
+				.col-sm-6.col-lg-3 
+					+e.item(href="#")
+						img(src="img/svg/fb-bg.svg" alt="facebook" loading="lazy")
+						span facebook
+				.col-sm-6.col-lg-3 
+					+e.item(href="#")
+						img(src="img/svg/vk-bg.svg" alt="ВКОНТАКТЕ" loading="lazy")
+						span ВКОНТАКТЕ
+				.col-sm-6.col-lg-3 
+					+e.item(href="#")
+						img(src="img/svg/tg-bg.svg" alt="TELEGRAM" loading="lazy")
+						span TELEGRAM
+	// end sSubscribe

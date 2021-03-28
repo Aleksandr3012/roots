@@ -7,7 +7,7 @@ mixin topLine()
 					+e.logo(href="/")
 						img(src="img/svg/logo.svg" alt="logo")
 				.col-auto 
-					+location
+					+location().d-none.d-sm-block
 				+e.col.col
 					+e.tel(href='tel:+74722373637') 
 						span.d-none.d-lg-inline +7 (4722) 37-36-37
@@ -21,14 +21,14 @@ mixin topLine()
 							+download('google-play')
 						.col-lg-4 
 							+btn('Записаться')
-				.col.d-lg-none
+				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span
 
 	// end topLine
 
 mixin btn(t)
-	a.btn.btn-light(href="#") 
+	a.btn.btn-light.link-modal-js(href="#modal-call") 
 		span= t
 
 mixin download(img)
@@ -37,7 +37,7 @@ mixin download(img)
 
 
 mixin location 
-	+b.location 
+	+b.location&attributes(attributes)
 		+e.head.drop-accardion-js 
 			span Белгород
 			+icon('chevron-down')

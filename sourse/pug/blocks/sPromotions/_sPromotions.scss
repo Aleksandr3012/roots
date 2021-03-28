@@ -5,28 +5,47 @@
 	// --sTPB: ;
 
 	&__inner {
-		margin-top: rem(-136px);
-		width: rem(745);
-		max-width: calc(100% - #{rem(300)});
-		margin-left: auto;
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(-136px);
+			width: rem(745);
+			margin-left: auto;
+			max-width: calc(100% - #{rem(300)});
+		}
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(19);
+		}
 	}
 
 	&__slide {
 		background: #000000;
 		box-shadow: 0px 0px 46px rgba(254, 0, 137, 0.15);
-		padding: rem(24) rem(32) rem(11);
+		padding: rem(16) rem(16) rem(0);
+		@include media-breakpoint-up(md) {
+			padding: rem(24) rem(32) rem(11);
+		}
 		color: #fff;
 		height: 100%;
 	}
 
 	.swiper-slide {
 		height: auto;
+		@include media-breakpoint-down(md) {
+			width: rem(267px);
+		}
 	}
 
 	h3 {
 		font-weight: 800;
 		text-transform: uppercase;
-		margin-bottom: rem(17);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(17);
+		}
+	}
+
+	&__slider {
+		@include media-breakpoint-down(lg) {
+			overflow: visible !important;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {

@@ -3,9 +3,17 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js.on
 			span
 		+e.inner
-
+			+e.logo(href='/')
+				img.res-i(src="img/svg/logo.svg" alt="logo" loading="lazy")
 			+mnu()
-			.text-right
+			+signUp().sm
+			+e.tel(href="tel:+74722373637") +7 (4722) 37-36-37
+			+e.row.row.align-items-center
+				.col-auto
+					+download('app-store')
+				.col-auto
+					+download('google-play')
+
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav

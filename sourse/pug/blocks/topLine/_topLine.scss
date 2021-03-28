@@ -1,15 +1,30 @@
 // start .topLine
 .topLine {
-	--sPT: #{rem(21)};
-	--sPB: #{rem(22)};
+	--sPT: #{rem(8)};
+	--sPB: #{rem(8)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(21)};
+		--sPB: #{rem(22)};
+	}
 	background: rgba(0, 0, 0, 0.82);
 
 	&__logo {
 		display: block;
+		@media (max-width: 400px) {
+			width: 61px;
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
 	}
 
 	&__mainRow {
-		--bs-gutter-x: #{rem(25)};
+		--bs-gutter-x: #{rem(6)};
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-x: #{rem(25)};
+		}
 	}
 
 	&__tel {

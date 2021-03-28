@@ -1,0 +1,108 @@
+// start .sMasters
+.sMasters {
+	--sPT: #{rem(28)};
+	--sTPB: #{rem(27)};
+	--sPB: #{rem(28)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(72)};
+		--sTPB: #{rem(27)};
+		--sPB: #{rem(70)};
+	}
+
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(138)};
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	.swiper-slide {
+		height: rem(261px);
+		@include media-breakpoint-up(lg) {
+			height: calc((100% - 30px) / 2);
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 261px;
+		}
+	}
+
+	&__slider {
+		@include media-breakpoint-up(lg) {
+			height: calc(261px * 2 + 30px);
+		}
+		@include media-breakpoint-down(lg) {
+			overflow: visible !important;
+		}
+	}
+
+	.btnMore {
+		margin-top: rem(27);
+		@include media-breakpoint-up(lg) {
+			width: rem(244);
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sMasters
+
+.master {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	color: #fff !important;
+	text-decoration: none;
+
+	.icon {
+		@include mt;
+		font-size: rem(19);
+	}
+
+	&__nameWrap {
+		background-color: #000;
+		padding: rem(9) rem(5) rem(9) rem(15);
+		@include media-breakpoint-up(lg) {
+			padding: rem(9) rem(9);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(9) 0 rem(9) rem(15);
+			min-width: rem(154px);
+		}
+		@include media-breakpoint-only(lg) {
+			width: 100%;
+		}
+		@include media-breakpoint-down(lg) {
+			min-width: rem(154);
+		}
+		display: inline-flex;
+		flex-direction: column;
+	}
+
+	&__name {
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+
+	&__row {
+		margin-top: auto;
+		@include roww(5px);
+	}
+
+	&__btn {
+		display: block;
+		background-color: #000;
+		display: grid;
+		place-items: center;
+		width: rem(59px);
+		height: rem(59px);
+		margin-left: auto;
+	}
+}

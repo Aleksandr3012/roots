@@ -10,7 +10,6 @@ $output-bourbon-deprecation-warnings: false;
 
 // Option B: Include parts of Bootstrap
 
-
 // v5
 
 // Layout & components
@@ -47,27 +46,30 @@ $output-bourbon-deprecation-warnings: false;
 // 		}
 // 	}
 // }
-// @import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/pagination";
 
-// .pagination-wrapper ul {
-// 	@extend .pagination;
-// }
+.pagination-wrapper ul {
+	@extend .pagination;
+	justify-content: center;
+	padding-top: rem(18);
+	@include roww(4px);
+}
 
-// .pagination-wrapper li .page-numbers {
-// 	@extend .page-link;
-// }
+.pagination-wrapper li .page-numbers {
+	@extend .page-link;
+}
 
-// .pagination-wrapper li {
-// 	@extend .page-item;
+.pagination-wrapper li {
+	@extend .page-item;
+	font-weight: 800;
 
-// 	.current {
-// 		z-index: 1;
-// 		// color: $pagination-active-color;
-// 		// background-color: $pagination-active-bg;
-// 		// border-color: $pagination-active-border-color;
-// 	}
-// }
-
+	.current {
+		z-index: 1;
+		color: $pagination-active-color;
+		background-color: $pagination-active-bg;
+		border-color: $pagination-active-border-color;
+	}
+}
 
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
@@ -88,9 +90,7 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
 
-
 @import "root";
 @import "base";
-@import '../pug/blocks/**/*.scss';
+@import "../pug/blocks/**/*.scss";
 @import "media"; // Всегда в конце
-

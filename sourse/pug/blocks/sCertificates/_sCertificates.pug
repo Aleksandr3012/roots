@@ -1,0 +1,28 @@
+mixin sCertificates(data)
+	// start sCertificates
+	+b.SECTION.sCertificates.section#sCertificates&attributes(attributes)
+		.container
+
+			+e.row.row
+				.col-lg-5
+					+b.section-title
+						h2 сертификаты
+					+e.slider--js.swiper-container
+						.swiper-wrapper
+							mixin slide(titlt,text,color)
+								+e.slideWrap.swiper-slide
+									+e.slide(href="#") 
+										.row.align-items-center
+											.col-sm-4.col-xl-5
+												+e.title(style= color)= titlt
+											.col
+												+e.text!= text
+							+slide('BRONZE',`Сертификат номиналом 1&nbsp;000&nbsp;рублей..`,'color: #FFFFFF;')
+							+slide('SILVER',`Сертификат номиналом 3&nbsp;000&nbsp;рублей.`,'color: #B5B5B5;')
+							+slide('GOLD',`Сертификат номиналом 5&nbsp;000&nbsp;рублей.`,'color: #E6C61F;')
+					+e.btnWrap
+						+signUp('gift')(class='sm')
+				.col.d-none.d-lg-block 
+					+e.imgWrap 
+						+pic('sectificat.jpg')
+	// end sCertificates

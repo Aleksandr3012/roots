@@ -3,13 +3,13 @@
 	--fontSizeBase: #{$em-base};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(80)};
-		--sPB: #{rem(70)};
+		--sPB: #{rem(72)};
 		--sTPB: #{rem(37)};
 	}
 
-	--sPT: #{rem(80 / 2)};
+	--sPT: #{rem(80 / 3)};
 	--sPB: #{rem(70 / 2)};
-	--sTPB: #{rem(37 / 2)};
+	--sTPB: #{rem(37 / 3.5)};
 
 	--swiperArrowSize: #{rem(68)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);

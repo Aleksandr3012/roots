@@ -1,0 +1,22 @@
+mixin sDiscounts(data)
+	// start sDiscounts
+	+b.SECTION.sDiscounts.section#sDiscounts&attributes(attributes)
+		.container
+			+b.section-title
+				h2 АКЦИИ
+
+			.row
+				mixin item(i, title,text)
+					+e.col.col-sm-6.col-lg-3 
+						+e.item
+							+e.imgWrap
+								+pic(`discount-${i}.jpg`,'','')
+							+e.textWra
+								+e.title= title 
+								p!= text 
+								+signUp(class="sm")
+				+item('1','СТУДЕНТАМ',`При предъявлении студенческого, цена стрижки всего 600 рублей`)
+				+item('2','ОТЕЦ И СЫН ',`Приходите вместе с&nbsp;сыном и&nbsp;получите скидку на&nbsp;совместную стрижку`)
+				+item('3','1+1 ',`Сделайте встречу с&nbsp;другом полезной вдвойне. Стрижки по&nbsp;сниженной цене`)
+				+item('4','СКИДКА В ЧЕСТЬ ДНЯ РОЖДЕНИЯ ',`20% скидка для именинников`)
+	// end sDiscounts

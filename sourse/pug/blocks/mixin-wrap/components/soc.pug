@@ -5,7 +5,8 @@ mixin item-sos(icon,t, a='#')
 		else
 			+e.iconWrap
 				+icon(icon)
-			span= t
+			if t
+				span= t
 //- social buttons
 mixin soc()
 	+b.soc&attributes(attributes)
@@ -18,3 +19,13 @@ mixin soc()
 			+item-sos('telegram','Telegram')
 
 //- /social buttons 
+
+mixin soc-sm()
+	+b.soc&attributes(attributes)
+		if block
+			block
+		else
+			+item-sos('instagram')
+			+item-sos('vk')
+			+item-sos('fb')
+			+item-sos('telegram')

@@ -1,2 +1,35 @@
 mixin footer()
-	footer.footer
+	+b.FOOTER.footer
+		+b.discount(href="#") Хочешь скидку ?
+		.container
+			+e.mainRow.row 
+				.col-auto
+					+e.logo(href="/")
+						img(src="img/svg/logo-lg.svg" alt="logo" loading="lazy")
+				.col-lg
+					+mnu-foot 
+				.col-auto 
+					+e.tel(href="tel:+74722373637") +7 (4722) 37-36-37
+					+btn('Записаться')
+				.col-sm-auto 
+					+e.row.row.align-items-center
+						.col-auto
+							+download('app-store')
+						.col-auto
+							+download('google-play')
+			+e.foot
+				.row.align-items-end
+					.col-lg-4 
+						+e.copyright 
+							span © ROOTS men's cut, 2021
+							+e.sm Все права защищены. Предложение не является публичной офертой
+					.col-lg-4 
+						+e.linkRow.row
+							.col-sm 
+								+e.linkSm(href="#") Политика конфиденциальности
+							.col-sm
+								+e.linkSm(href="#") Пользовательское соглашение
+					.col-lg
+						+e.dev(href='#')
+							span Разработка и<br>продвижение сайта
+							img(src="img/svg/digget.svg" alt="digget" loading="lazy")

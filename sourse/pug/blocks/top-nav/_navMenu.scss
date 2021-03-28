@@ -34,10 +34,19 @@
 		align-items: center;
 		color: #fff !important;
 		padding: rem(11) rem(5);
+		@include media-breakpoint-down(lg) {
+			background: rgba(0, 0, 0, 0.36);
+			width: 32px;
+			height: 32px;
+			justify-content: center;
+			padding: 0;
+		}
 	}
 	.icon {
 		font-size: rem(12);
-		margin-right: rem(5);
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(5);
+		}
 		@include media-breakpoint-up(xl) {
 			margin-right: rem(10);
 		}

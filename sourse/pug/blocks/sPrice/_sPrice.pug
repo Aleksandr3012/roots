@@ -1,0 +1,51 @@
+mixin sPrice(data)
+	// start sPrice
+	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Цены и услуги
+
+
+			+e.slider--js.tabs.tabs--js.swiper-container
+				.tabs__caption.swiper-wrapper
+					.swiper-slide.tabs__btn.active мастер
+					.swiper-slide.tabs__btn топ-мастер
+					.swiper-slide.tabs__btn амбассадор
+
+				.tabs__wrap
+					mixin content(t)
+						.tabs__content&attributes(attributes)
+							.row 
+								.col.order-lg-last
+									+e.descr 
+										+e.decor.d-none.d-lg-block 
+											img(src="img/@2x/sheet.png" alt="" loading='lazy')
+										h3= t
+										p Новый Мастер, успешно прошедший обучение в школе ROOTS education.<br>Ему доступна база знаний рутс, качественный сервис, консультация и технично выполненные стрижки.<br>Вы неприменно получите то, за чем пришли.
+								+e.col.col-lg-8 
+									mixin item(t,p)
+										+e.item 
+											+e.service= t
+											+e.price= p
+												| ₽
+									.row 
+										.col-md-6
+											+item('Мужская стрижка','800')
+											+item('Детская стрижка','600')
+											+item('Стрижка машинкой','450')
+											+item('Окантовка стрижки','300')
+											+item('Бритье головы','800')
+											+item('Укладка волос','300')
+										.col-md-6
+											+item('Моделирование бороды','800')
+											+item('Стрижка бороды','800')
+											+item('Королевское бритье','800')
+											+item('Камуфляж седины','800')
+											+item('Коррекция воском','800')
+											+e.btnWrap
+												+signUp(class='black sm')
+
+					+content('мастер').active
+					+content('топ-мастер')
+					+content('амбассадор')
+	// end sPrice

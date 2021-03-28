@@ -1,10 +1,18 @@
 // start .sHaircuts
 .sHaircuts {
-	--sPT: #{rem(70)};
-	// --sPB: ;
+	--sPT: #{rem(20)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(70)};
+	}
+	@include media-breakpoint-down(md) {
+		--sPB: #{rem(20)};
+	}
 
 	.section-title {
 		max-width: rem(680);
+		@include media-breakpoint-down(md) {
+			padding-bottom: calc(var(--sTPB) / 2);
+		}
 	}
 
 	h2 {
@@ -28,11 +36,22 @@
 	&__col {
 		display: flex;
 		flex-direction: column;
+		@include media-breakpoint-down(lg) {
+			padding-bottom: rem(25);
+		}
+	}
+
+	&__cardCol {
+		padding-bottom: rem(15);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(30);
+		}
 	}
 
 	.btnMore {
 		margin-top: auto;
 		display: flex;
+		max-width: rem(261);
 	}
 
 	.btn-secondary {
@@ -42,6 +61,18 @@
 	&__row {
 		@include roww(30px);
 	}
+
+	&__slider {
+		height: 100%;
+		@include media-breakpoint-down(lg) {
+			overflow: visible !important;
+		}
+	}
+
+	&__slide {
+		max-width: rem(261);
+	}
+
 	@include media-breakpoint-up(sm) {
 	}
 	@include media-breakpoint-between(md, xl) {
@@ -53,8 +84,14 @@
 } // end.sHaircuts
 
 .card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 	&__photo {
-		margin-bottom: rem(16);
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(16);
+		}
 		@include block(261, 317);
 		img {
 			width: 100%;
@@ -83,47 +120,18 @@
 		padding-left: rem(9);
 	}
 
-	&__btn {
+	.btn {
 		display: block;
+		margin-top: auto;
+		@include media-breakpoint-down(xl) {
+			padding-left: 0.3rem;
+			padding-right: 0.3rem;
+		}
 	}
 
 	h5 {
 		text-transform: uppercase;
 		margin-bottom: rem(5);
 		font-weight: 800;
-	}
-}
-
-.btnMore {
-	background-color: #000;
-	text-transform: uppercase;
-	font-weight: 800;
-	display: inline-flex;
-	align-items: center;
-	text-decoration: none;
-	text-align: center;
-
-	&__text {
-		padding: rem(10);
-		color: #fff;
-		width: 100%;
-	}
-
-	&__arrow {
-		margin-left: auto;
-		background: #1b1b1b;
-		padding: rem(11.5) rem(12) rem(11.5) rem(4);
-	}
-
-	.icon {
-		font-size: rem(9);
-		color: #fff;
-		@include mt;
-	}
-
-	@include h {
-		.icon {
-			color: rgba(255, 255, 255, 0.2);
-		}
 	}
 }

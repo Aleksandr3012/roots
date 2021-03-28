@@ -1,0 +1,48 @@
+mixin sMasters(data)
+	// start sMasters
+	+b.SECTION.sMasters.section#sMasters&attributes(attributes)
+		.container
+			+b.section-title
+				.row.justify-content-between
+					.col-auto
+						h2 МАСТЕРА
+					.col-auto.d-none.d-md-block
+						+b.btnMore(href="#")
+							+e.text посмотреть всех
+							+e.arrow 
+								+icon('arrow-right')
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						+master('9','ИВАН','Амбассадор')
+					.swiper-slide
+						+master('5','владислав jr.','Топ-мастер')
+					.swiper-slide
+						+master('2','Дарья','Топ-мастер')
+					.swiper-slide
+						+master('6','амир','Мастер')
+					.swiper-slide
+						+master('1','ВЛАдислав','Топ-мастер')
+					.swiper-slide
+						+master('7','артем','Мастер')
+					.swiper-slide
+						+master('4','Андрей','Топ-мастер')
+					.swiper-slide
+						+master('8','катя','Мастер')
+			+b.btnMore.d-md-none(href="#")
+				+e.text посмотреть всех
+				+e.arrow 
+					+icon('arrow-right')
+	// end sMasters
+
+mixin master(i,n,s)
+	+b.master(href="#")
+		+pic(`master-${i}.jpg`,'bg','')(class="picture-bg")
+		+e.row.row.justify-content-between
+			.col
+				+e.nameWrap 
+					+e.name= n 
+					+e.skil= s
+			.col-auto.align-self-end 
+				+e.btn
+					+icon('calendar')

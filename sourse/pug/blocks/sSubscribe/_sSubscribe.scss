@@ -1,0 +1,57 @@
+// start .sSubscribe
+.sSubscribe {
+	// --sPT: ;
+
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(74)};
+		--sTPB: #{rem(11)};
+	}
+
+	padding-top: calc(var(--sPT) / 1.7);
+
+	p {
+		max-width: rem(630);
+	}
+
+	&__text {
+		padding-bottom: rem(35);
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: rem(10) rem(10);
+		font-size: $h4-font-size;
+		@include media-breakpoint-up(xl) {
+			padding: rem(10) rem(25);
+			font-size: $h3-font-size;
+		}
+		min-height: rem(57.5);
+		background: #e4e4e4;
+		text-transform: uppercase;
+		font-weight: 800;
+		text-decoration: none;
+		color: #000 !important;
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(30);
+		}
+
+		@include h {
+			background: $secondary;
+		}
+
+		img {
+			margin-right: rem(19);
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sSubscribe

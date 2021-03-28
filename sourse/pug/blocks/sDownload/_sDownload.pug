@@ -1,0 +1,28 @@
+mixin sDownload(data)
+	// start sDownload
+	+b.SECTION.sDownload.section#sDownload&attributes(attributes)
+		.container
+			.row
+				.col-md-6.col-lg-5 
+					+b.section-title
+						h2 Скачивай наше приложение!
+					ul 
+						li Узнавайте свободное для записи время
+						li Получайте уведомления об&nbsp;акциях и&nbsp;ваших записях
+						li Почитайте про мастера, прежде чем записаться к&nbsp;нему
+					+e.row.row 
+						.col-auto 
+							+download('app-store')
+						.col-auto 
+							+download('google-play')(class="playmarket")
+				.col-4.d-none.d-lg-block 
+					+e.phone
+						+pic('phone.png')
+				+e.col.col-md-6.col-lg-3.align-self-center
+					+e.rate(href="#") 
+						+pic('yandex.png','','')
+					+e.rate(href="#") 
+						+pic('google.png','','')
+					+e.rate(href="#") 
+						+pic('2gis.png','','')
+	// end sDownload
