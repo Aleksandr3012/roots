@@ -56,6 +56,13 @@
 		display: block;
 		position: relative;
 		z-index: 2;
+
+		@include media-breakpoint-down(sm) {
+			img {
+				width: 100%;
+				max-width: rem(300);
+			}
+		}
 	}
 
 	&__col {

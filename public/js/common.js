@@ -1,11 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -173,50 +167,6 @@ var JSCCommon = {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
-	sendForm: function sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			var th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-thanks',
-					type: 'inline'
-				}); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
-	},
 	heightwindow: function heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		var vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
@@ -240,33 +190,18 @@ var JSCCommon = {
 			}, 1100);
 			return false;
 		});
-	},
-	getCurrentYear: function getCurrentYear(el) {
-		var now = new Date();
-		var currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
 };
 var $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl;
-
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
-
-	var x = window.location.host; // let screenName;
-	// screenName = document.body.dataset.bg;
-
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
-	}
+	JSCCommon.animateScroll();
 
 	function whenResize() {
 		var topNav = document.querySelector('.top-nav  ');
@@ -284,32 +219,6 @@ function eventHandler() {
 		passive: true
 	});
 	whenResize();
-	var defaultSl = (_defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true
-		},
-		watchOverflow: true
-	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defineProperty(_defaultSl, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _defineProperty(_defaultSl, "pagination", {
-		el: ' .swiper-pagination',
-		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
-
-	}), _defaultSl);
-	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
-	})); // modal window
-
 	var promotionSlider = new Swiper('.sPromotions__slider--js', {
 		slidesPerView: 'auto',
 		// loop: true,
@@ -329,7 +238,7 @@ function eventHandler() {
 		spaceBetween: 16,
 		// autoHeight: true,
 		breakpoints: {
-			992: {
+			768: {
 				slidesPerView: 3,
 				direction: 'vertical',
 				spaceBetween: 0
@@ -384,10 +293,4 @@ if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
-} // window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
+}

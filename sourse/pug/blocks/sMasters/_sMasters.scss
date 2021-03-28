@@ -21,10 +21,18 @@
 		height: rem(261px);
 		@include media-breakpoint-up(lg) {
 			height: calc((100% - 30px) / 2);
+			&:nth-child(odd) {
+				margin-bottom: rem(30) !important;
+			}
 		}
 
 		@include media-breakpoint-down(lg) {
-			width: 261px;
+			width: 261px !important;
+			margin-top: 0 !important;
+		}
+
+		&:nth-child(even) {
+			margin-top: 0 !important;
 		}
 	}
 

@@ -25,9 +25,7 @@
 		@include media-breakpoint-up(md) {
 			padding: rem(23) rem(30);
 		}
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(16);
-		}
+
 		@include media-breakpoint-up(xl) {
 			padding: rem(23) rem(64);
 		}
@@ -42,8 +40,12 @@
 	}
 
 	&__slideWrap {
-		@include media-breakpoint-down(lg) {
+		@include media-breakpoint-down(md) {
 			width: 89% !important;
+		}
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(16);
+			height: auto !important;
 		}
 	}
 

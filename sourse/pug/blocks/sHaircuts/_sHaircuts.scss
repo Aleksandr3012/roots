@@ -71,6 +71,9 @@
 
 	&__slide {
 		max-width: rem(261);
+		@include media-breakpoint-down(lg) {
+			width: 100% !important;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {

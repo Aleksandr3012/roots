@@ -30,7 +30,7 @@
 	.swiper-slide {
 		height: auto;
 		@include media-breakpoint-down(md) {
-			width: rem(267px);
+			width: rem(267px) !important;
 		}
 	}
 
