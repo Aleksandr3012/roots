@@ -36,7 +36,7 @@ var JSCCommon = {
 			$.fancybox.close();
 		});
 		$.fancybox.defaults.backFocus = false;
-		var linkModal = document.querySelectorAll('.link-modal');
+		var linkModal = document.querySelectorAll('.link-modal-js');
 
 		function addData() {
 			linkModal.forEach(function (element) {

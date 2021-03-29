@@ -38,7 +38,7 @@ const JSCCommon = {
 			$.fancybox.close();
 		})
 		$.fancybox.defaults.backFocus = false;
-		const linkModal = document.querySelectorAll('.link-modal');
+		const linkModal = document.querySelectorAll('.link-modal-js');
 		function addData() {
 			linkModal.forEach(element => {
 				element.addEventListener('click', () => {

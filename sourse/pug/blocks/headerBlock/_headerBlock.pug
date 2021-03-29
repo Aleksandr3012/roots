@@ -22,12 +22,13 @@ mixin headerBlock()
 	// end headerBlock
 
 mixin signUp(gift)
-	+b.signUp(href='#')&attributes(attributes)
-		if gift 
+	if gift 
+		+b.signUp.link-modal-js(href='#modal-call' data-title="Сделать подарок")&attributes(attributes)
 			+e.text Сделать подарок
 			+e.calendar 
 				+icon('gift')
-		else
+	else
+		+b.signUp.link-modal-js(href='#modal-call' data-title="Записаться на стрижку")&attributes(attributes)
 			+e.text Записаться
 			+e.calendar 
 				+icon('calendar')

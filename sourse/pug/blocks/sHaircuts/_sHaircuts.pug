@@ -39,7 +39,7 @@ mixin card(i,name)
 			.col
 				h5 Мастер
 				+e.name= name
-		a.btn.btn-secondary.link-modal-js(href="#modal-call") Записаться к мастеру
+		a.btn.btn-secondary.link-modal-js(href="#modal-call" data-title=`записаться на стрижку к мастеру ${name}`) Записаться к мастеру
 
 mixin sHaircuts-inner(data)
 	// start sHaircuts

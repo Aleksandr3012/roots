@@ -36,7 +36,7 @@ mixin sMasters(data)
 	// end sMasters
 
 mixin master(i,n,s)
-	+b.master(href="#")
+	+b.master.link-modal-js(href="#modal-call" data-title=`записаться к мастеру ${n}`)
 		+pic(`master-${i}.jpg`,'bg','')(class="picture-bg")
 		+e.row.row.justify-content-between
 			.col
