@@ -10,6 +10,9 @@
 	margin-bottom: 1px;
 	min-height: 100vh;
 	@include media-breakpoint-up(md) {
+		min-height: calc(100vh - #{rem(50)});
+	}
+	@media (min-width: 1400px) {
 		min-height: calc(100vh - #{rem(262)});
 	}
 	// min-height: calc(var(--vh, 1vh) * 100);
