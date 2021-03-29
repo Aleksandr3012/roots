@@ -19,10 +19,31 @@ mixin sDownload(data)
 					+e.phone
 						+pic('phone.png')
 				+e.col.col-md-6.col-lg-3.align-self-center
-					+e.rate(href="#") 
-						+pic('yandex.png','','')
-					+e.rate(href="#") 
-						+pic('google.png','','')
-					+e.rate(href="#") 
-						+pic('2gis.png','','')
+					+rate('yandex','4,9','68')
+					+rate('google','5,0','133')
+					+rate('2gis','5,0','26')
 	// end sDownload
+
+
+mixin rate(img,rate, q)
+	+b.rate(href="#") 
+		.row.align-items-center
+			.col-4
+				+pic(`${img}.png`,'','')
+			+e.col.col
+				+e.starsWrap 
+					+e.star.active
+						+icon('star')
+					+e.star.active
+						+icon('star')
+					+e.star.active
+						+icon('star')
+					+e.star.active
+						+icon('star')
+					+e.star.active
+						+icon('star')
+				+e.rate= rate 
+					| РЕЙТИНГ
+				+e.quantity На основе 
+					strong= q
+					| отзывов

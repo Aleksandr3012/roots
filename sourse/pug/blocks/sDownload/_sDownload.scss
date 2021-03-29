@@ -50,21 +50,6 @@
 		}
 	}
 
-	&__rate {
-		filter: drop-shadow(0px 0px 59px rgba(0, 0, 0, 0.25));
-		margin-bottom: rem(16);
-		display: block;
-		position: relative;
-		z-index: 2;
-
-		@include media-breakpoint-down(sm) {
-			img {
-				width: 100%;
-				max-width: rem(300);
-			}
-		}
-	}
-
 	&__col {
 		@include media-breakpoint-up(lg) {
 			padding-top: rem(18);
@@ -115,3 +100,62 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sDownload
+
+.rate {
+	filter: drop-shadow(0px 0px 59px rgba(0, 0, 0, 0.25));
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: rem(16);
+	padding: rem(16) rem(24);
+	@include media-breakpoint-only(lg) {
+		padding: rem(16) rem(15);
+	}
+	display: block;
+	position: relative;
+	z-index: 2;
+	text-decoration: none;
+	color: #000;
+
+	&__starsWrap {
+		@include roww(5px, m);
+		margin-bottom: rem(8);
+		display: block;
+	}
+
+	&__star {
+		.icon {
+			color: $secondary;
+			font-size: rem(14);
+		}
+
+		&.active {
+			.icon {
+				color: #fccf5d;
+			}
+		}
+	}
+
+	&__rate {
+		display: block;
+		text-transform: uppercase;
+		font-weight: 800;
+		margin-bottom: rem(4);
+	}
+
+	&__quantity {
+		display: block;
+		font-size: $small;
+		strong {
+			font-weight: 800;
+			display: inline-block;
+			margin-right: rem(2);
+		}
+	}
+
+	.row {
+		@include roww(24px);
+		@include media-breakpoint-only(lg) {
+			@include roww(10px);
+		}
+	}
+}
