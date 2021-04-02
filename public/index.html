@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body>
+	<body class="main-page">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js on"><span></span>
@@ -42,6 +42,90 @@
 				</div>
 			</div>
 			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start topLine-->
+				<div class="topLine section" id="topLine">
+					<div class="container">
+						<div class="topLine__mainRow row align-items-center">
+							<div class="col-auto"> <a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt="logo"/></a>
+							</div>
+							<div class="col-auto"> 
+								<div class="location d-none d-sm-block">
+									<div class="location__head drop-accardion-js"> <span>Белгород</span>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
+									</div>
+									<div class="location__drop drop-accardion-toggle-js"> <a class="location__item" href="#"> <span>Москва</span></a><a class="location__item" href="#"> <span>Тбилиси</span></a>
+									</div>
+								</div>
+							</div>
+							<div class="topLine__col col"><a class="topLine__tel" href="tel:+74722373637"> <span class="d-none d-lg-inline">+7 (4722) 37-36-37</span><span class="d-lg-none">
+									<svg class="icon icon-call ">
+										<use xlink:href="img/svg/sprite.svg#call"></use>
+									</svg></span></a>
+							</div>
+							<div class="col-auto"> 
+								<div class="topLine__row row align-items-center">
+									<div class="col-4 d-none d-lg-block"> <a class="download" href="#"><img class="res-i" src="img/svg/app-store.svg" alt="" loading="lazy"/></a>
+									</div>
+									<div class="col-4 d-none d-lg-block"> <a class="download" href="#"><img class="res-i" src="img/svg/google-play.svg" alt="" loading="lazy"/></a>
+									</div>
+									<div class="col-lg-4"> <a class="btn btn-light link-modal-js" href="#modal-call" data-title="записаться на стрижку"> <span>Записаться</span></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy d-none d-lg-block">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col"> 
+								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О нас</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Мастера</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Косметика</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Школа</a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-auto">
+								<div class="soc"><a class="soc__item" href="#" target="_blank"><span class="soc__iconWrap">
+									<svg class="icon icon-instagram ">
+										<use xlink:href="img/svg/sprite.svg#instagram"></use>
+									</svg></span><span>Instagram</span></a><a class="soc__item" href="#" target="_blank"><span class="soc__iconWrap">
+									<svg class="icon icon-vk ">
+										<use xlink:href="img/svg/sprite.svg#vk"></use>
+									</svg></span><span>Вконтакте</span></a><a class="soc__item" href="#" target="_blank"><span class="soc__iconWrap">
+									<svg class="icon icon-fb ">
+										<use xlink:href="img/svg/sprite.svg#fb"></use>
+									</svg></span><span>Facebook</span></a><a class="soc__item" href="#" target="_blank"><span class="soc__iconWrap">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg></span><span>Telegram</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock" id="headerBlock">
 				<!-- picture-->
@@ -52,90 +136,6 @@
 					<source type="image/jpg" srcset="img/@1x/header-bg.jpg"/><img class="object-fit-js" src="img/@2x/header-bg.jpg" alt="" loading="lazy"/>
 				</picture>
 				<!-- /picture-->
-				<!-- start header-->
-				<header class="header" id="header">
-					<!-- start topLine-->
-					<div class="topLine section" id="topLine">
-						<div class="container">
-							<div class="topLine__mainRow row align-items-center">
-								<div class="col-auto"> <a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt="logo"/></a>
-								</div>
-								<div class="col-auto"> 
-									<div class="location d-none d-sm-block">
-										<div class="location__head drop-accardion-js"> <span>Белгород</span>
-											<svg class="icon icon-chevron-down ">
-												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-											</svg>
-										</div>
-										<div class="location__drop drop-accardion-toggle-js"> <a class="location__item" href="#"> <span>Москва</span></a><a class="location__item" href="#"> <span>Тбилиси</span></a>
-										</div>
-									</div>
-								</div>
-								<div class="topLine__col col"><a class="topLine__tel" href="tel:+74722373637"> <span class="d-none d-lg-inline">+7 (4722) 37-36-37</span><span class="d-lg-none">
-										<svg class="icon icon-call ">
-											<use xlink:href="img/svg/sprite.svg#call"></use>
-										</svg></span></a>
-								</div>
-								<div class="col-auto"> 
-									<div class="topLine__row row align-items-center">
-										<div class="col-4 d-none d-lg-block"> <a class="download" href="#"><img class="res-i" src="img/svg/app-store.svg" alt="" loading="lazy"/></a>
-										</div>
-										<div class="col-4 d-none d-lg-block"> <a class="download" href="#"><img class="res-i" src="img/svg/google-play.svg" alt="" loading="lazy"/></a>
-										</div>
-										<div class="col-lg-4"> <a class="btn btn-light link-modal-js" href="#modal-call" data-title="записаться на стрижку"> <span>Записаться</span></a>
-										</div>
-									</div>
-								</div>
-								<div class="col-auto d-lg-none">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- end topLine-->
-					<!-- start top-nav-->
-					<div class="top-nav block-with-lazy d-none d-lg-block">
-						<div class="container">
-							<div class="row align-items-center">
-								<div class="col"> 
-									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О нас</a>
-										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Мастера</a>
-										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Косметика</a>
-										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакты</a>
-										</li>
-										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Школа</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-auto">
-									<div class="soc"><a class="soc__item" href="#" target="_blank"><span class="soc__iconWrap">
-										<svg class="icon icon-instagram ">
-											<use xlink:href="img/svg/sprite.svg#instagram"></use>
-										</svg></span><span>Instagram</span></a><a class="soc__item" href="#" target="_blank"><span class="soc__iconWrap">
-										<svg class="icon icon-vk ">
-											<use xlink:href="img/svg/sprite.svg#vk"></use>
-										</svg></span><span>Вконтакте</span></a><a class="soc__item" href="#" target="_blank"><span class="soc__iconWrap">
-										<svg class="icon icon-fb ">
-											<use xlink:href="img/svg/sprite.svg#fb"></use>
-										</svg></span><span>Facebook</span></a><a class="soc__item" href="#" target="_blank"><span class="soc__iconWrap">
-										<svg class="icon icon-telegram ">
-											<use xlink:href="img/svg/sprite.svg#telegram"></use>
-										</svg></span><span>Telegram</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- end top-nav-->
-				</header>
-				<!-- end header-->
 				<div class="headerBlock__main container section">
 					<div class="headerBlock__location">
 						<svg class="icon icon-location ">
