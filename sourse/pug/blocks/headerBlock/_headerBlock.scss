@@ -2,14 +2,14 @@
 .headerBlock {
 	--sTPB: #{rem(15)};
 	--sPB: #{rem(10)};
-	--sPT: #{rem(35)};
+	--sPT: #{rem(115)};
 
 	@include media-breakpoint-up(md) {
-		--sPT: #{rem(50)};
+		--sPT: #{rem(150)};
 	}
 
 	@media (min-width: 1370px) {
-		--sPT: #{rem(90)};
+		--sPT: #{rem(190)};
 	}
 	margin-bottom: 1px;
 	min-height: 100vh;

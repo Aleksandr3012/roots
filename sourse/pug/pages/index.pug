@@ -14,7 +14,7 @@ include ../blocks/sDownload/_sDownload.pug
 include ../blocks/sSubscribe/_sSubscribe.pug
 
 block variables
-	- let  mainPage= null 
+	- let  mainPage= "main-page"
 	- let  bg= null
 
 block title
@@ -24,10 +24,10 @@ block pagecontent
 
 
 	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
 	+headerBlock()
-		+header()
-			+topLine()
-			+top-nav()
 	+sPromotions()
 	+sHaircuts()
 	+sAdvantages()
