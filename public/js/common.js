@@ -4,7 +4,9 @@ var div = document.createElement('div');
 div.style.overflowY = 'scroll';
 div.style.width = '50px';
 div.style.height = '50px';
+document.body.append(div);
 var scrollWidth = div.offsetWidth - div.clientWidth;
+div.remove();
 var JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
