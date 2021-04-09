@@ -60,6 +60,16 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
+
+	&--inner {
+		.sMasters__slider {
+			height: auto;
+		}
+
+		.master {
+			height: rem(261px);
+		}
+	}
 } // end.sMasters
 
 .master {

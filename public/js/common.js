@@ -1,10 +1,23 @@
 "use strict";
 
+var div = document.createElement('div');
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+var scrollWidth = div.offsetWidth - div.clientWidth;
 var JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	modalCall: function modalCall() {
+		$("[data-fancybox]").fancybox({
+			beforeLoad: function beforeLoad() {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = scrollWidth + 'px';
+			},
+			afterClose: function afterClose() {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = null; // 	document.querySelector("html").classList.remove("fixed")
+			}
+		});
 		$(".link-modal-js").fancybox({
 			arrows: false,
 			infobar: false,
@@ -26,14 +39,11 @@ var JSCCommon = {
 				}
 			},
 			beforeLoad: function beforeLoad() {
-				document.querySelector("html").classList.add("fixed");
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = scrollWidth + 'px';
 			},
 			afterClose: function afterClose() {
-				document.querySelector("html").classList.remove("fixed");
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = null; // 	document.querySelector("html").classList.remove("fixed")
 			}
-		});
-		$(".modal-close-js").click(function () {
-			$.fancybox.close();
 		});
 		$.fancybox.defaults.backFocus = false;
 		var linkModal = document.querySelectorAll('.link-modal-js');

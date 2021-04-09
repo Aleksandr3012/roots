@@ -1,12 +1,30 @@
 
-const JSCCommon = {
+let div = document.createElement('div');
 
+div.style.overflowY = 'scroll';
+div.style.width = '50px';
+div.style.height = '50px';
+
+let scrollWidth = div.offsetWidth - div.clientWidth;
+
+
+const JSCCommon = {
+	
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
-
+	
 	modalCall() {
-
+		
+		$("[data-fancybox]").fancybox({
+			beforeLoad: function () {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = scrollWidth + 'px';
+			},
+			afterClose: function () {
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = null;
+				// 	document.querySelector("html").classList.remove("fixed")
+			},
+		})
 		$(".link-modal-js").fancybox({
 			arrows: false,
 			infobar: false,
@@ -28,15 +46,14 @@ const JSCCommon = {
 				},
 			},
 			beforeLoad: function () {
-				document.querySelector("html").classList.add("fixed")
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = scrollWidth + 'px';
 			},
 			afterClose: function () {
-				document.querySelector("html").classList.remove("fixed")
+				if (!document.querySelector("html").classList.contains(".fixed")) document.querySelector("html").style.marginRight = null;
+			// 	document.querySelector("html").classList.remove("fixed")
 			},
 		});
-		$(".modal-close-js").click(function () {
-			$.fancybox.close();
-		})
+
 		$.fancybox.defaults.backFocus = false;
 		const linkModal = document.querySelectorAll('.link-modal-js');
 		function addData() {

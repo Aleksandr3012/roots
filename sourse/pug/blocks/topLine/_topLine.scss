@@ -72,6 +72,13 @@
 		text-align: center;
 	}
 
+	.btn-light {
+		@include media-breakpoint-only(lg) {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+
 	@include media-breakpoint-between(md, xl) {
 	}
 	@include media-breakpoint-only(xl) {

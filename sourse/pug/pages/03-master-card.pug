@@ -1,0 +1,35 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sPromotions/_sPromotions.pug
+include ../blocks/sHaircuts/_sHaircuts.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sDiscounts/_sDiscounts.pug
+include ../blocks/sCertificates/_sCertificates.pug
+include ../blocks/sMasters/_sMasters.pug
+include ../blocks/sDownload/_sDownload.pug
+include ../blocks/sSubscribe/_sSubscribe.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'ROOTS'
+	title= title
+block pagecontent
+
+
+
+	+mob-mnu()
+	+header()
+		+topLine()
+		+top-nav()
+	+sMasters-inner
+	+sDownload
+	+sContact()
+	+sSubscribe
+	+footer()
