@@ -1,8 +1,10 @@
 // start .sPress
 .sPress {
-	// --sPT: ;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(48)};
+		--sTPB: #{rem(29)};
+	}
 	// --sPB: ;
-	// --sTPB: ;
 
 	&__link {
 		text-transform: uppercase;
@@ -11,13 +13,19 @@
 		font-size: rem(18);
 		text-decoration: none;
 		display: block;
+		margin-bottom: rem(10);
 		&.active {
 			color: #000;
 			pointer-events: none;
 		}
 	}
 
+	&__linksWrap {
+		padding-bottom: rem(20);
+	}
+
 	p {
+		margin-bottom: rem(32);
 	}
 	&__item {
 		position: relative;
@@ -25,6 +33,9 @@
 		// height: calc(100% - #{rem(20)});
 		margin-bottom: rem(20);
 		// border: 1px solid #ffffff;
+		@include media-breakpoint-up(sm) {
+			display: flex;
+		}
 		overflow: hidden;
 		box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.12);
 		border-radius: 16px;
@@ -34,13 +45,11 @@
 			a {
 				color: #000;
 				display: inline-block;
-			}
-		}
 
-		h3,
-		.h3 {
-			font-weight: bold;
-			letter-spacing: -0.2px;
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 	}
 	&__textBlock {
@@ -48,20 +57,29 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		padding-top: rem(24);
-		padding-right: rem(14);
+		padding: rem(14) rem(14) 0;
+		@include media-breakpoint-up(sm) {
+			padding: rem(24) rem(14) rem(10) rem(0);
+		}
 		@include media-breakpoint-up(xl) {
 			padding-right: rem(38);
 		}
-		@extend .mono;
+		h3,
+		.h3 {
+			font-weight: bold;
+			letter-spacing: -0.5px;
+			margin-bottom: rem(15);
+		}
+		// @extend .mono;
 	}
 	&__date {
 		position: absolute;
 		z-index: 5;
-		left: 20px;
-		top: 20px;
+		left: 24px;
+		top: 24px;
 		background-color: #000;
-		padding: rem(5.5) rem(17.5);
+		padding: rem(4) rem(17);
+		font-size: 12px;
 		color: #fff;
 		font-weight: bold;
 		border-radius: 5px;
@@ -69,6 +87,9 @@
 	&__imgWrap {
 		position: relative;
 		background: #cbe3ff;
+		@include media-breakpoint-up(sm) {
+			min-height: 100%;
+		}
 		@include block(283, 283);
 		img {
 			width: 100%;
@@ -79,11 +100,14 @@
 	}
 
 	.row {
-		height: 100%;
+		// height: 100%;
 	}
 
-	&__col {
+	&__imgCol {
 		min-height: 100%;
+		@include media-breakpoint-up(sm) {
+			max-width: 46%;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {

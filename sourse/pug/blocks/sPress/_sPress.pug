@@ -3,20 +3,21 @@ mixin sPress(data)
 	+b.SECTION.sPress.section#sPress&attributes(attributes)
 		.container
 			.row
-				.col-lg-6
+				.col-lg-5
 					+b.section-title
 						h2 О нас пишут
-					+e.link(href="#") GQ
-					+e.link.active(href="#") русская газета
-					+e.link(href="#") русская газета
+					+e.linksWrap
+						+e.link(href="#") GQ
+						+e.link.active(href="#") русская газета
+						+e.link(href="#") русская газета
 				.col
 					+b.section-title
 						h2 Пресса о roots
-					p Если вы&nbsp;хотели&nbsp;бы опубликовать в&nbsp;своем издании, блоге или на&nbsp;сайте интервью или материал о&nbsp;ROOTS, пожалуйста, пишите нам на&nbsp;почту, и&nbsp;мы&nbsp;предоставим интересующую вас информацию.
+					p Если вы&nbsp;хотели&nbsp;бы опубликовать в&nbsp;своем издании, блоге или на&nbsp;сайте интервью или&nbsp;материал о&nbsp;ROOTS, пожалуйста, пишите нам на&nbsp;почту, и&nbsp;мы&nbsp;предоставим интересующую вас информацию.
 					+e.item 
 						+e.date 15.05.2021
 						+e.row.row 
-							+e.col.col-sm-5 
+							+e.imgCol.col-sm-6 
 								+e.imgWrap 
 									img(src="img/@2x/press.jpg" alt="" loading="lazy")
 							.col 

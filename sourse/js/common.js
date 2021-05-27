@@ -225,7 +225,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'about-3.jpg';
+	screenName = 'about-4.jpg';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -322,6 +322,34 @@ function eventHandler() {
 	$('.drop-accardion-js').on('click', function(){
 		$(this).toggleClass('active').parent().toggleClass('active').find('.drop-accardion-toggle-js').toggleClass('active');
 	})
+
+	function makeDDGroup(qSelecorts){
+    for (let parentSelect of qSelecorts){
+      let parent = document.querySelector(parentSelect);
+      if (parent){
+        // childHeads, kind of funny))
+        let ChildHeads = parent.querySelectorAll('.accardion__head--js');
+        $(ChildHeads).click(function (){
+          let clickedHead = this;
+          $(ChildHeads).each(function (){
+            if (this === clickedHead){
+              $(this.parentElement).toggleClass('active');
+              $(this.parentElement).find('.accardion__content--js').slideToggle(function (){
+                $(this).toggleClass('active');
+              });
+            }
+            else{
+              $(this.parentElement).removeClass('active');
+              $(this.parentElement).find('.accardion__content--js').slideUp(function (){
+                $(this).removeClass('active');
+              });
+            }
+          });
+        });
+      }
+    }
+  }
+  makeDDGroup(['.sVacancies', '.dd-price-js']);
 
 };
 if (document.readyState !== 'loading') {
