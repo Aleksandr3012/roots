@@ -25,3 +25,39 @@ mixin sSubscribe(data)
 						img(src="img/svg/tg-bg.svg" alt="TELEGRAM" loading="lazy")
 						span TELEGRAM
 	// end sSubscribe
+
+
+mixin sSubscribe-contacts(data)
+	// start sSubscribe
+	+b.SECTION.sSubscribe--contacts.section#sSubscribe&attributes(attributes)
+		.container
+			+b.section-title
+				h2 контакты
+
+			.row 
+				+e.col.col-lg 
+					.row
+						.col-sm-6.col-lg-12 
+							+e.item(href="#")
+								img(src="img/svg/inst-bg.svg" alt="INSTAGRAM" loading="lazy")
+								span ROots в 
+									span.inst INSTAGRAM
+						.col-sm-6.col-lg-12 
+							+e.item(href="#")
+								img(src="img/svg/fb-bg.svg" alt="facebook" loading="lazy")
+								span ROots в 
+									span.fb facebook
+						.col-sm-6.col-lg-12 
+							+e.item(href="#")
+								img(src="img/svg/vk-bg.svg" alt="ВКОНТАКТЕ" loading="lazy")
+								span ROots в 
+									span.vk ВКОНТАКТЕ
+						.col-sm-6.col-lg-12 
+							+e.item(href="#")
+								img(src="img/svg/tg-bg.svg" alt="TELEGRAM" loading="lazy")
+								span ROots в 
+									span.tg TELEGRAM
+				.col
+					+e.imgWrap
+						+pic('photo.jpg','','')
+	// end sSubscribe

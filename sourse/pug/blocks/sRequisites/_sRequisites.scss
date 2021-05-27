@@ -1,0 +1,51 @@
+// start .sRequisites
+.sRequisites {
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(47)};
+		--sTPB: #{rem(30)};
+	}
+	@include media-breakpoint-up(lg) {
+		min-height: 70vh;
+	}
+	// --sPB: ;
+
+	&__block {
+		background-color: $secondary;
+		padding: rem(10);
+		@include media-breakpoint-up(sm) {
+			padding: rem(32);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(32) rem(52) rem(32) rem(30);
+		}
+		max-width: 552px;
+	}
+
+	.h5,
+	h5 {
+		line-height: 150%;
+		@media (max-width: 400px) {
+			font-size: $em-base;
+		}
+	}
+
+	strong.h5 {
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	.row {
+		&:not(:last-child) {
+			padding-bottom: rem(4);
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sRequisites

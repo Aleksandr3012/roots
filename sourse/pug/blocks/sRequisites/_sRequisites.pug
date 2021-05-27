@@ -1,0 +1,22 @@
+mixin sRequisites(data)
+	// start sRequisites
+	+b.SECTION.sRequisites.section#sRequisites&attributes(attributes)
+		.container
+			+b.section-title
+				h2 реквизиты
+
+			.row
+				.col-lg
+					+e.block 
+						mixin tr(td1,td2)
+							.row
+								.col-6
+									strong.h5.ttu!= td1
+								.col-6
+									.h5!= td2 
+						+tr(`ИНН`,`7729467999`) 
+						+tr(`КПП`,`7729467999`) 
+						+tr(`Р/с`,`7729467999`) 
+						+tr(`Юридический адрес`,`111024, г. Москва, ул. Энтузиастов 2-я, д.&nbsp;5, к.&nbsp;10, эт.&nbsp;3, пом. VII, ком.&nbsp;6`) 
+
+	// end sRequisites

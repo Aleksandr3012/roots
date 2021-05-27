@@ -214,6 +214,13 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
+	var x = window.location.host;
+	var screenName;
+	screenName = 'about-3.jpg';
+
+	if (screenName && x.includes("localhost:30")) {
+		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
+	}
 
 	function whenResize() {
 		var topNav = document.querySelector('.top-nav  ');

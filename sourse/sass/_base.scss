@@ -7,7 +7,7 @@
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 60px;
+	background-position: center 3px;
 	opacity: 0;
 	// opacity: 0.7;
 	// filter: invert(1);
@@ -632,6 +632,36 @@ iframe {
 	@include h {
 		.icon {
 			color: rgba(255, 255, 255, 0.2);
+		}
+	}
+}
+
+.pageHead {
+	padding-top: rem(14);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(24);
+		--sTPB: #{rem(45)};
+	}
+}
+
+.tabs {
+	&--links {
+		position: relative;
+		overflow: visible !important;
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 200vw;
+			height: 1px;
+			left: -50vw;
+			background-color: $secondary;
+		}
+		.tabs__btn {
+			width: auto;
+			min-width: rem(164px);
+			padding-left: rem(20);
+			padding-right: rem(20);
 		}
 	}
 }
