@@ -1,5 +1,7 @@
 .footer {
-	padding-top: calc(var(--sPT) / 1.5);
+	@include media-breakpoint-up(sm) {
+		padding-top: calc(var(--sPT) / 1.5);
+	}
 	padding-bottom: rem(30);
 
 	margin-top: auto;
