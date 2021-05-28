@@ -136,7 +136,8 @@
 		padding: rem(9);
 		min-width: rem(210);
 		text-align: center;
-
+		@include mt;
+		&:hover,
 		&.active {
 			background-color: #000;
 			color: #fff;
